@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.orhanobut.logger.Logger;
 
 public class MainActivity extends AppCompatActivity {
@@ -80,16 +79,16 @@ public class MainActivity extends AppCompatActivity {
                 if (data != null) {
                     Glide.with(this)
                             .load(data)
-                            .placeholder(R.mipmap.ic_launcher_round)
-                            .error(R.mipmap.ic_launcher)
-                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                            .placeholder(R.drawable.gif_loading)
+                            .error(R.drawable.loading_error)
+//                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                             .into(mImageView);
                 } else if (uri != null) {
                     Glide.with(this)
                             .load(uri)
-                            .placeholder(R.mipmap.ic_launcher_round)
-                            .error(R.mipmap.ic_launcher)
-                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                            .placeholder(R.drawable.gif_loading)
+                            .error(R.drawable.loading_error)
+//                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                             .into(mImageView);
                 }
             }
