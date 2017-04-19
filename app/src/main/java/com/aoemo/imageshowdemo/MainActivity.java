@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 if (data != null) {
                     Glide.with(this)
                             .load(data)
+                            .asGif()
                             .placeholder(R.drawable.gif_loading)
                             .error(R.drawable.loading_error)
 //                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (uri != null) {
                     Glide.with(this)
                             .load(uri)
+                            .asGif()
                             .placeholder(R.drawable.gif_loading)
                             .error(R.drawable.loading_error)
 //                            .diskCacheStrategy(DiskCacheStrategy.SOURCE)
